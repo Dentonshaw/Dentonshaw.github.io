@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度SEO_网站优化_关键词排名 - DentonShaw主页</title>
+    <meta name="description" content="肖登天(DentonShaw)专注搜索引擎排名优化服务十余载，为千万家中小企业及个人站长提供专业的seo技术支持与咨询顾问，让你的品牌在互联网时代名列前茅。" />
+    <meta name="keywords" content="seo,seo优化,网站优化,seo技术,seo顾问,关键词排名,网站排名" />
+    <script src="./static/js/tailwind.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#ffb703',
+                        dark: '#1a1a2e',
+                        light: '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                },
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #e63946 0%, #ffb703 100%);
+            }
+            .bg-gradient-dark {
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            }
+            .shadow-glow {
+                box-shadow: 0 0 30px rgba(230, 57, 70, 0.3);
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+    
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #e63946, #ffb703);
+            border-radius: 4px;
+        }
+        
+        /* 滚动动画 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 导航栏滚动效果 */
+        .navbar-scrolled {
+            background: rgba(26, 26, 46, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="scroll-smooth bg-light font-sans">
+
+    <!-- ==================== 导航栏 ==================== -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-search text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl md:text-2xl font-bold text-white">Denton<span class="text-secondary">Shaw</span></span>
+                </div>
+                
+                <!-- 桌面导航菜单 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#concept" class="text-white/80 hover:text-secondary transition-colors duration-300">SEO概念</a>
+                    <a href="#advantages" class="text-white/80 hover:text-secondary transition-colors duration-300">核心优势</a>
+                    <a href="#functions" class="text-white/80 hover:text-secondary transition-colors duration-300">三大作用</a>
+                    <a href="#system" class="text-white/80 hover:text-secondary transition-colors duration-300">优化系统</a>
+                    <a href="https://baiduseo.mikecrm.com/1dGJnNG" target="_blank" 
+                       class="bg-gradient-primary text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                        立即开始优化
+                    </a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark/95 backdrop-blur-lg">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#concept" class="block text-white/80 hover:text-secondary py-2">SEO概念</a>
+                <a href="#advantages" class="block text-white/80 hover:text-secondary py-2">核心优势</a>
+                <a href="#functions" class="block text-white/80 hover:text-secondary py-2">三大作用</a>
+                <a href="#system" class="block text-white/80 hover:text-secondary py-2">优化系统</a>
+                <a href="https://baiduseo.mikecrm.com/1dGJnNG" target="_blank" 
+                   class="block bg-gradient-primary text-white px-6 py-3 rounded-full font-semibold text-center">
+                    立即开始优化
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="index-img" style="position:fixed; height:20vh; text-align:center; top:150vh; left:0;"><a href="/" rel="index"><img referrerPolicy="no-referrer" src="https://tse3-mm.bing.com/th?q={city}{sitename}" alt="{city}{sitename}" /></a></section>
+
+    <!-- ==================== Hero 区域 ==================== -->
+    <section class="relative min-h-screen bg-gradient-dark overflow-hidden">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- 左侧文字 -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                        <span class="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-white/80 text-sm">网站优化专家</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        让客户
+                        <span class="bg-gradient-to-r from-primary to-secondary text-gradient">主动找到你</span>
+                        <br/>——这便是“SEO”
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-white/70 mb-8 max-w-xl mx-auto lg:mx-0">
+                        通过专业的SEO优化，让您的网站在搜索引擎中脱颖而出。精准流量、高效转化、权威可信，一站式解决您的获客难题。
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://baiduseo.mikecrm.com/1dGJnNG" target="_blank"
+                           class="bg-gradient-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                            <i class="fas fa-rocket mr-2"></i>
+                            立即开始优化
+                        </a>
+                        <a href="#concept" 
+                           class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-play-circle mr-2"></i>
+                            了解更多
+                        </a>
+                    </div>
+                    
+                    <!-- 数据统计 -->
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">90%</div>
+                            <div class="text-white/60 text-sm mt-1">排名提升</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">300%</div>
+                            <div class="text-white/60 text-sm mt-1">流量增长</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">8000+</div>
+                            <div class="text-white/60 text-sm mt-1">成功案例</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧图片 -->
+                <div class="lg:w-1/2 animate-float">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-30 transform rotate-6"></div>
+                        <img src="./static/img/hero_seo.jpg" alt="SEO优化" 
+                             class="relative rounded-2xl shadow-2xl w-full">
+                        <!-- 装饰元素 -->
+                        <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 animate-float" style="animation-delay: 0.5s;">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-chart-line text-primary text-2xl"></i>
+                                <div>
+                                    <div class="text-sm text-gray-500">排名提升</div>
+                                    <div class="font-bold text-dark">+90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 animate-float" style="animation-delay: 1s;">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-users text-secondary text-2xl"></i>
+                                <div>
+                                    <div class="text-sm text-gray-500">精准客户</div>
+                                    <div class="font-bold text-dark">+200%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 滚动提示 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#concept" class="text-white/50 hover:text-white transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== SEO概念介绍 ==================== -->
+    <section id="concept" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    到底什么是SEO
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+                    搜索引擎优化
+                    <span class="text-primary">深度解析</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    SEO是搜索引擎优化（即：Search Engine Optimization）的英文缩写，是通过优化网站内容、结构、曝光率等，提升关键词在搜索引擎上的排名，是企业数字化营销的核心基石。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- 左侧图片 -->
+                <div class="fade-in">
+                    <div class="relative">
+                        <img src="./static/img/concept_programmer.jpg" alt="SEO工作原理" 
+                             class="rounded-2xl shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-gradient-primary p-6 rounded-2xl shadow-xl text-white">
+                            <div class="text-3xl font-bold">7×24</div>
+                            <div class="text-white/80">全天候获客</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧内容 -->
+                <div class="space-y-6 fade-in">
+                    <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+                        <h3 class="text-xl font-bold text-dark mb-3 flex items-center">
+                            <i class="fas fa-lightbulb text-primary mr-3"></i>
+                            SEO的定义
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            SEO（Search Engine Optimization，搜索引擎优化）是指通过了解搜索引擎的排名规则，对网站进行内部和外部的优化调整，
+                            提高网站在搜索引擎中的关键词自然排名，获得更多免费精准流量的过程。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary">
+                        <h3 class="text-xl font-bold text-dark mb-3 flex items-center">
+                            <i class="fas fa-cogs text-secondary mr-3"></i>
+                            工作原理
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            搜索引擎通过爬虫抓取网页内容，建立索引数据库，当用户搜索时，根据算法对网页进行相关性、权威性评估，
+                            最终展示排名结果。SEO就是让您的网站在这些评估中获得更高分数。
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-primary/5 p-4 rounded-xl text-center">
+                            <i class="fas fa-search text-primary text-3xl mb-2"></i>
+                            <div class="font-semibold text-dark">站内优化</div>
+                            <div class="text-sm text-gray-500">内容、结构、代码</div>
+                        </div>
+                        <div class="bg-secondary/5 p-4 rounded-xl text-center">
+                            <i class="fas fa-link text-secondary text-3xl mb-2"></i>
+                            <div class="font-semibold text-dark">站外优化</div>
+                            <div class="text-sm text-gray-500">外链、权威、曝光</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEO 5大优势 ==================== -->
+    <section id="advantages" class="py-20 bg-gradient-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    网站优化的核心竞争力
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    百度SEO的
+                    <span class="text-secondary">5大优势</span>
+                </h2>
+                <p class="text-white/70 max-w-3xl mx-auto text-lg">
+                    相比传统营销方式，SEO具备不可替代的独特优势，是企业长期发展的必选策略
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 优势1：费用低廉 -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:transform hover:-translate-y-2 fade-in group">
+                    <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-coins text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">费用低廉</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        相比竞价广告成本更低，无需按点击付费。一次优化，长期受益，投入产出比远超其他营销方式。
+                        随着排名稳定，获客成本持续降低。
+                    </p>
+                </div>
+                
+                <!-- 优势2：流量精准 -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:transform hover:-translate-y-2 fade-in group">
+                    <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">流量精准</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        用户主动搜索产品或服务，意向度极高。这些都是有真实需求的潜在客户，
+                        转化率远高于被动推送的广告流量，成交率提升5-10倍。
+                    </p>
+                </div>
+                
+                <!-- 优势3：获客方便 -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:transform hover:-translate-y-2 fade-in group">
+                    <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">获客方便</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        落地页是自己的网站，可以自由留各种联系方式：电话、微信、QQ、表单等。
+                        不受平台限制，客户信息完全掌握在自己手中，打造私域流量池。
+                    </p>
+                </div>
+                
+                <!-- 优势4：减少重复沟通 -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:transform hover:-translate-y-2 fade-in group">
+                    <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">减少重复沟通</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        产品或服务的相关信息通过网页就可以清楚展示给访客，客户在咨询前已了解基本信息，
+                        减少不必要的重复沟通，大幅提升客服效率和成交率。
+                    </p>
+                </div>
+                
+                <!-- 优势5：塑造权威形象 -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:transform hover:-translate-y-2 fade-in group md:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">塑造权威形象</h3>
+                    <p class="text-white/70 leading-relaxed">
+                        搜索引擎排名靠前本身就是一种实力证明。用户天然相信排名靠前的品牌更专业、更可靠。
+                        建立行业权威地位，增强用户信任感，打造品牌护城河。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEO 3大核心作用 ==================== -->
+    <section id="functions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    SEO优化的核心价值
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+                    网站SEO的
+                    <span class="text-primary">三大核心作用</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    SEO不仅仅是排名提升，更是企业品牌建设和业务增长的核心驱动力
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 作用1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 fade-in">
+                    <div class="lg:w-1/3">
+                        <div class="relative">
+                            <div class="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-glow">
+                                <span class="text-white text-4xl font-bold">01</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 bg-gradient-to-r from-primary/5 to-transparent p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-dark mb-4">
+                            <i class="fas fa-users text-primary mr-3"></i>
+                            精准获客，极速成交
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            让有需要的潜在客户，在搜索产品或服务时能够在更靠前的位置找到你。这些都是主动寻找解决方案的高意向客户，
+                            他们会主动联系你咨询，沟通成本极低，成交速度极快。真正实现"客户找上门"的理想获客状态。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 作用2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-8 fade-in">
+                    <div class="lg:w-1/3">
+                        <div class="relative">
+                            <div class="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-glow">
+                                <span class="text-white text-4xl font-bold">02</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 bg-gradient-to-l from-secondary/5 to-transparent p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-dark mb-4">
+                            <i class="fas fa-bullhorn text-secondary mr-3"></i>
+                            品牌营销的核心基石
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            SEO是一切品牌营销的核心！任何渠道的品牌推广——无论是短视频、直播、朋友圈、线下广告——
+                            最后都得依赖用户搜索你的品牌时能够找到你。如果用户搜不到你，所有品牌推广都毫无意义。
+                            SEO是所有营销活动的最终收口。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 作用3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 fade-in">
+                    <div class="lg:w-1/3">
+                        <div class="relative">
+                            <div class="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto shadow-glow">
+                                <span class="text-white text-4xl font-bold">03</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 bg-gradient-to-r from-primary/5 to-transparent p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-dark mb-4">
+                            <i class="fas fa-robot text-primary mr-3"></i>
+                            AI大模型的权威信源
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            SEO可以让你的品牌相关信息成为AI大模型的权威信源！你的网站排名靠前，具有天然的权威优势，
+                            各种AI引用网络内容时会优先引用你的信息。这样你的品牌在AI的回答中就可以获得更多曝光机会，
+                            在AI时代抢占先机，赢在未来。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEO系统介绍 ==================== -->
+    <section id="system" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    智能优化系统
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+                    SEO排名
+                    <span class="text-primary">优化系统</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    登录即可设置关键词排名优化任务，全自动智能提升各大搜索引擎排名
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- 左侧：系统功能 -->
+                <div class="space-y-6 fade-in">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-key text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-dark mb-2">关键词任务设置</h4>
+                            <p class="text-gray-600">系统登录，简单几步即可添加关键词优化任务，系统自动开始优化网站</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-check text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-dark mb-2">模拟真实用户搜索</h4>
+                            <p class="text-gray-600">智能算法模拟真实用户搜索行为，提升网站在搜索引擎中的曝光与展现</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-dark mb-2">全自动优化执行</h4>
+                            <p class="text-gray-600">系统7×24小时自动运行，无需人工干预，持续提升各大搜索引擎排名</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-bar text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-dark mb-2">无负担轻松获客</h4>
+                            <p class="text-gray-600">极低的优化费用，无论是小微企业还是个人，都可以毫无负担轻松获客</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧：系统展示图 -->
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-primary rounded-2xl blur-3xl opacity-20"></div>
+                        <img src="./static/img/system_dashboard.jpg" alt="SEO系统界面" 
+                             class="relative rounded-2xl shadow-2xl w-full border-4 border-white">
+                        
+                        <!-- 装饰标签 -->
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg">
+                            <i class="fas fa-magic mr-2"></i>智能SEO优化系统
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 转化CTA区域 ==================== -->
+    <section class="py-24 bg-gradient-primary relative overflow-hidden">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full"></div>
+                <div class="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border-2 border-white rounded-full"></div>
+            </div>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                准备好让客户主动找到你了吗？
+            </h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                立即开启SEO优化任务，让您的网站排名飙升，精准客户源源不断，业绩突飞猛进！您与成功只有一个按钮的距离……
+            </p>
+            
+            <a href="https://baiduseo.mikecrm.com/1dGJnNG" target="_blank"
+               class="inline-flex items-center bg-white text-primary px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <i class="fas fa-rocket mr-3 text-2xl"></i>
+                立即开始优化
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+            
+            <div class="mt-10 flex flex-wrap justify-center gap-8 text-white/80">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    无需下载安装
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    3分钟快速上手
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    最快7天见效
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    专业技术支持
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="bg-dark py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- 品牌信息 -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-search text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Denton<span class="text-secondary">Shaw</span></span>
+                    </div>
+                    <p class="text-white/60 mb-4">
+                        专业搜索引擎优化服务商，助力企业数字化营销升级，让客户主动找到你！
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 快速链接 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">快速导航</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#concept" class="text-white/60 hover:text-secondary transition-colors">SEO概念</a></li>
+                        <li><a href="#advantages" class="text-white/60 hover:text-secondary transition-colors">核心优势</a></li>
+                        <li><a href="#functions" class="text-white/60 hover:text-secondary transition-colors">三大作用</a></li>
+                        <li><a href="#system" class="text-white/60 hover:text-secondary transition-colors">优化系统</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-white/60">
+                            <i class="fas fa-phone text-secondary mr-3"></i>
+                            139-3199-5587
+                        </li>
+                        <li class="flex items-center text-white/60">
+                            <i class="fas fa-envelope text-secondary mr-3"></i>
+                            urkeji@vip.qq.com
+                        </li>
+                        <li class="flex items-center text-white/60">
+                            <i class="fas fa-map-marker-alt text-secondary mr-3"></i>
+                            DentonShaw个人主页
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/40">
+                    Copyright © 2026 DentonShaw(<a href="//dentonshaw.github.io" rel="index">Dentonshaw.github.io</a>) 版权所有
+                </p>
+                <p class="text-white/40"><b>最新文档：</b></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JavaScript ==================== -->
+    <script>
+        // 移动端菜单切换
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // 点击移动端菜单项后关闭菜单
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // 滚动动画 - Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // 观察所有fade-in元素
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
